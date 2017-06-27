@@ -15,8 +15,17 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit-icons.min.js"></script>
     </h:head>
     <h:body>
-        <h1>TodoList</h1>
-        <h:link outcome="create">CREATE</h:link>
+		<h1>CREATE</h1>
+		<h:form>
+			<h:panelGrid columns="2">
+				ID:<h:inputText value="#{taskBean.id}"></h:inputText>
+				TaskName:<h:inputText value="#{TaskBean.taskName}"></h:inputText>
+				TaskMemo:<h:inputText value="#{TaskBean.taskMemo}"></h:inputText>
+				Date:<h:inputText value="#{TaskBean.deadline}"></h:inputText>
+			</h:panelGrid>
+			<h:link outcome="index">BACK</h:link>
+			<h:commandButton value="送信" action="#{TaskBean.next()}"></h:commandButton>
+		</h:form>
     </h:body>
 </html>
 
