@@ -19,12 +19,12 @@
 		<h:form>
 			<h:panelGrid columns="2">
 				ID:<h:inputText value="#{taskBean.id}"></h:inputText>
-				TaskName:<h:inputText value="#{TaskBean.taskName}"></h:inputText>
-				TaskMemo:<h:inputText value="#{TaskBean.taskMemo}"></h:inputText>
-				Date:<h:inputText value="#{TaskBean.deadline}"></h:inputText>
+				TaskName:<h:inputText value="#{taskBean.taskName}"></h:inputText>
+				TaskMemo:<h:inputText value="#{taskBean.taskMemo}"></h:inputText>
+
 			</h:panelGrid>
 			<h:link outcome="index">BACK</h:link>
-			<h:commandButton value="送信" action="#{TaskBean.next()}"></h:commandButton>
+			<h:commandButton value="送信" action="#{taskBean.next()}"></h:commandButton>
 		</h:form>
     </h:body>
 </html>
