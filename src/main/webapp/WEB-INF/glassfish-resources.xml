@@ -12,9 +12,7 @@
       <property name="driverClass" value="com.mysql.jdbc.Driver"/>
   </jdbc-connection-pool>
 
-  <jdbc-resource enabled="true"
-                 jndi-name="java:app/jdbc/SampleWebAppDs"
-                 object-type="user"
+  <jdbc-resource jndi-name="jdbc/SampleWebAppDs"
                  pool-name="mysql_todolist_rootPool">
   </jdbc-resource>
 
