@@ -49,7 +49,7 @@ public class TaskBean {
 	}
 
 	public void create(){
-		Task task = new Task(id,taskName,taskMemo,deadline);
+		Task task = new Task(id,taskName,taskMemo,null);
 		try{
 			db.create(task);
 

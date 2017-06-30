@@ -1,6 +1,6 @@
 package db;
 
-import java.util.Calendar;
+import java.time.LocalDateTime;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -11,7 +11,7 @@ public class TaskDB {
 	@PersistenceContext(unitName = "todolist")
 	private EntityManager em;
 	public void create(Task task){
-		task.setDeadline(Calendar.getInstance().getTime());
+		task.setDeadline(LocalDateTime.now());
 		em.persist(task);
 	}
 }

@@ -1,7 +1,7 @@
 package db;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,11 +13,11 @@ public class Task implements Serializable{
 	private Integer id;
 	private String taskName;
 	private String taskMemo;
-	private Date deadline;
+	private LocalDateTime deadline;
 
 	public Task(){}
 
-	public Task(Integer id, String taskName, String taskMemo, Date deadline) {
+	public Task(Integer id, String taskName, String taskMemo, LocalDateTime deadline) {
 		super();
 		this.id = id;
 		this.taskName = taskName;
@@ -43,10 +43,10 @@ public class Task implements Serializable{
 	public void setTaskMemo(String taskMemo) {
 		this.taskMemo = taskMemo;
 	}
-	public Date getDeadline() {
+	public LocalDateTime getDeadline() {
 		return deadline;
 	}
-	public void setDeadline(Date deadline) {
+	public void setDeadline(LocalDateTime deadline) {
 		this.deadline = deadline;
 	}
 }
